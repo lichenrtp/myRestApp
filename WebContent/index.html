@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Li Chen's CIO Project</title>	
+	<link rel="stylesheet" type="text/css" href="styles/app.css">
+	<script src="scripts/jquery-3.2.1.min.js"></script>
+	<script src="scripts/app.js"></script>
+</head>
+<body>
+	<div class='main flex-container flex-item'>
+  		<div class="leftContent">
+  			<div class="inputGroup">
+  				<span class="label">First Name: </span><input id="fName" type="text" name="fName" placeholder="*" required>
+  			</div>
+  			<div class="inputGroup">
+  				<span class="label">Last Name: </span><input id="lName" type="text" name="lName" placeholder="*" required>
+  			</div>
+  			<div class="inputGroup">
+  				<span class="label">Address: </span><input id="address" type="text" name="address">
+  			</div>
+  			<div class="inputGroup">
+  				<span class="label">Company: </span><input id="company" type="text" name="company">
+  			</div>
+  			<div class="buttonGroup">
+  				<button onclick="save()">Save</button><button onclick="erase()">Clear</button>				
+  			</div>  			
+			</div>
+  		<div class="rightContent">
+    		<div id="results"></div>
+	  	</div>
+	  			  
+	</div>
+</body>
+</html>

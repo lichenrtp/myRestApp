@@ -1,0 +1,53 @@
+.main {
+  width: 100%;
+}
+
+.leftContent {
+	border-right: 1px solid black;
+	margin-top: 30px;
+	margin-left: 15px;		
+	width: 40%;	
+}
+
+.rightContent {
+	margin-top: 30px;
+	margin-left: 15px;
+	width: 60%;	
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: flex-start;
+}
+
+.flex-item {
+	order: 0;
+	flex: 1 1 auto;
+	align-self: stretch;
+}
+
+.buttonGroup {
+	display: flex; 
+	flex-direction: row;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.leftContent button {
+	margin-right: 8px;
+}
+
+.label {
+	font-weight: bold;
+	font-size: 14px;
+	margin-right: 5px
+}
+
+.inputGroup {
+	margin-top: 10px;
+}
+
