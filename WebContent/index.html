@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Li Chen's CIO Project</title>	
 	<link rel="stylesheet" type="text/css" href="styles/app.css">
-	<script src="scripts/jquery-3.2.1.min.js"></script>
 	<script src="scripts/angular-1.5.9.min.js"></script>
 	<script src="scripts/app.js"></script>
 </head>
@@ -12,23 +11,23 @@
 	<div class='main flex-container flex-item'>
   		<div class="leftContent">
   			<div class="inputGroup">
-  				<span class="label">First Name: </span><input id="fName" type="text" name="fName" placeholder="*" required>
+  				<span class="label">First Name: </span><input id="fName" type="text" name="fName" ng-model="firstName" placeholder="*" required>
   			</div>
   			<div class="inputGroup">
-  				<span class="label">Last Name: </span><input id="lName" type="text" name="lName" placeholder="*" required>
+  				<span class="label">Last Name: </span><input id="lName" type="text" name="lName" ng-model="lastName" placeholder="*" required>
   			</div>
   			<div class="inputGroup">
-  				<span class="label">Address: </span><input id="address" type="text" name="address">
+  				<span class="label">Address: </span><input id="address" type="text" name="address" ng-model="address">
   			</div>
   			<div class="inputGroup">
-  				<span class="label">Company: </span><input id="company" type="text" name="company">
+  				<span class="label">Company: </span><input id="company" type="text" name="company" ng-model="company">
   			</div>
   			<div class="buttonGroup">
   				<button ng-click="save()">Save</button><button ng-click="erase()">Clear</button>				
   			</div>  			
 			</div>
   		<div class="rightContent">
-    		<div id="results" ng-if= "firstName.length!=0 || lastName.length!=0 || address.length!=0 || company.length!=0">
+    		<div id="results" ng-if= "showDB">
     			<div class="inputGroup">
   					<span class="label">First Name: </span> {{firstName}}
   				</div>

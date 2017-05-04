@@ -9,23 +9,24 @@ app.controller('myCtrl', ['$scope', function($scope) {
 	$scope.lastName = "";
 	$scope.address = "";
 	$scope.company = "";
+	$scope.showDB = false;
 	
 	//erase 
   $scope.erase = function() {
-  	$("#fName").val("");
-  	$("#lName").val("");
-  	$("#address").val("");
-  	$("#company").val("");
-  	$("#results").html("");
+  	$scope.firstName = "";
+  	$scope.lastName = "";
+  	$scope.address = "";
+  	$scope.company = "";
+  	$scope.showDB = false;
   };
   
   //create a json string for ajax call
   $scope.buildJsonStr = function () {
   	var json = {
-  			"firstName": $("#fName").val(),
-  			"lastName": $("#lName").val(),
-  			"address": $("#address").val(),
-  			"company": $("#company").val()	
+  			"firstName": $scope.firstName,
+  			"lastName": $scope.lastName,
+  			"address": $scope.address,
+  			"company": $scope.company	
   	}
   	return JSON.stringify(json);
   };
@@ -55,7 +56,8 @@ app.controller('myCtrl', ['$scope', function($scope) {
   	$scope.firstName = jsonObj.firstName[0];
   	$scope.lastName = jsonObj.lastName[0];
   	$scope.address = jsonObj.address[0];
-  	$scope.company = jsonObj.company[0];						
+  	$scope.company = jsonObj.company[0];	
+  	$scope.showDB = true;
   };
   
 }]);
